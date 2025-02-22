@@ -8,8 +8,7 @@ func longestConsecutive(nums []int) int {
 		if _, ok := existMap[num-1]; !ok {
 			length := 1
 			for _, ok1 := existMap[num+length]; ok1; _, ok1 = existMap[num+length] {
-                delete(existMap, num+length)
-                length++
+				length++
 			}
 			if length > res {
 				res = length
